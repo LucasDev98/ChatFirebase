@@ -1,14 +1,10 @@
 
-<p>hola mundo</p>
-<ul>
-  <li class="text" *ngFor="let chat of chats | async">
-      {{ chat.mensaje }}
-  </li>
-</ul>
-
-
-<div class="container">
-    <h1>Mensajes</h1>
-    <hr>
-    <app-chat></app-chat>
+<nav>
+  <h3></h3>
+</nav>
+<div class="container main-container">
+    <!-- <h1>FireChat</h1> -->
+    <div class="chat-window">
+      <app-chat></app-chat>
+    </div>
 </div>
