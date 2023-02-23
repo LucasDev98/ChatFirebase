@@ -1,0 +1,14 @@
+
+<p>hola mundo</p>
+<ul>
+  <li class="text" *ngFor="let chat of chats | async">
+      {{ chat.mensaje }}
+  </li>
+</ul>
+
+
+<div class="container">
+    <h1>Mensajes</h1>
+    <hr>
+    <app-chat></app-chat>
+</div>
