@@ -4,14 +4,18 @@
 
 <h1>Chat</h1>
 <hr>
-<div class="app-mensajes" id="app-mensajes">
-    <div [ngClass]="{ 'text-right': _cs.user.uid == chat.uid }" *ngFor="let chat of _cs.chats">
+    <app-spinner *ngIf="spinner"></app-spinner>
+    <div class="app-mensajes" id="app-mensajes">
+      <div [ngClass]="{ 'text-right': _cs.user.uid == chat.uid }" *ngFor="let chat of _cs.chats">
+         <div class="container-foto" [ngClass]="{ 'img-user': _cs.user.uid == chat.uid }" >
+          <img [src]="chat.img | domSanitizer" alt="Imagen de usuario" class="img-profile">
+         </div>
         <span  [ngClass]="{'badge-primary': _cs.user.uid == chat.uid ,'badge-success': _cs.user.uid !== chat.uid }" class="badge badge-primary">Lucas</span>
         <p>{{ chat.mensaje }}</p>
+
     </div>
 
-
-</div>
+  </div>
 <input type="text"
        class="form-control"
        placeholder="Escribe tu mensaje"

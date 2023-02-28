@@ -4,4 +4,5 @@ export interface Mensaje {
     mensaje: string;
     fecha: number;
     nombre: string;
+    img : string;
 }

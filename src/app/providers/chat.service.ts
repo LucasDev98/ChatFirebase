@@ -27,6 +27,7 @@ export class ChatService {
                     }else {
                       this.user.displayName = user.displayName;
                       this.user.uid = user.uid;
+                      this.user.imgProfile = user.photoURL;
                     }
                 })
 
@@ -62,6 +63,7 @@ export class ChatService {
       nombre :  this.user.displayName,
       mensaje : texto,
       uid : this.user.uid,
+      img : this.user.imgProfile,
       fecha : new Date().getTime(),
     }
     this.itemsCollection.add(mensaje)

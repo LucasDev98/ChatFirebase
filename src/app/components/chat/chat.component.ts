@@ -8,12 +8,14 @@ import { ChatService } from 'src/app/providers/chat.service';
 export class ChatComponent implements OnInit {
     mensaje : string = ''
     chatDom! : any;
+    spinner : boolean = true;
     constructor( public _cs : ChatService ){
         this._cs.mostrarMensajes()
             .subscribe( ()=> {
                 setTimeout( ()=> {
                   this.chatDom.scrollTop = this.chatDom.scrollHeight;
                 },30)
+                this.spinner = false;
             })
     }
     ngOnInit(): void {

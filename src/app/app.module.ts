@@ -12,12 +12,16 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { LoginComponent } from './components/login/login.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { DomSanitizerPipe } from './pipes/dom-sanitizer.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    LoginComponent
+    LoginComponent,
+    SpinnerComponent,
+    DomSanitizerPipe
   ],
   imports: [
     BrowserModule,
